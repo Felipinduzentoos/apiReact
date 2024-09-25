@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-    <h1>Olá josé</h1>
+    <h1>Olá joséw</h1>
     {loading ? (
       <img 
         src={loadingGif}
