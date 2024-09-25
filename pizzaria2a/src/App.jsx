@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
-import loadingGif from './Rolling@1x-1.0s-200px-200px.gif';
+import React, { useState, useEffect } from 'react';
+import loadingGif from './Rolling@1x-1.0s-200px-200px.gif'
+import Refresh from './Refresh'
 function App() {
   const [images, setImages] = useState(''); 
   const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
+
+    
     fetch('https://dog.ceo/api/breeds/image/random')
       .then(response => response.json())
       .then(data => {
@@ -17,21 +19,33 @@ function App() {
         console.error('Error fetching dog image:', error);
         setLoading(false)
       });
-  }, []); 
+}, []); 
+
 
   return (
     <div>
-    <h1>Olá joséw</h1>
+      <h1 className='insta'>By: @y.lipe___</h1>
+    <h1>Random Dog Images</h1>
+    <div className='container'>
     {loading ? (
       <img 
+      className='loading'
         src={loadingGif}
-        style={{ width: '100px', height: '100px' }} 
+        style={{ maxWidth: '50px', maxHeight: '50px' , objectFit: 'cover'  }} 
       />
     ) : (
-      <img src={images} alt="Random Dog" style={{ width: '300px', height: '300px' }} />
+      <img src={images} alt="Random Dog" style={{ marginLeft:'20px', width: '300px', height: '300px' }} />
     )}
-  </div>
+
+ </div>
+ <div>
+  <Refresh></Refresh>
+  <li className='api'>Api: DogApi</li>
+ </div>
+
+ </div>
+
 );
 }
 
-export default App;
+export default App; 
