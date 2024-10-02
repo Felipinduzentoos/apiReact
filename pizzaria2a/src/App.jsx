@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import loadingGif from './Rolling@1x-1.0s-200px-200px.gif'
 import Refresh from './Refresh'
+import { Helmet } from 'react-helmet'
 function App() {
   const [images, setImages] = useState(''); 
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,25 @@ function App() {
 
   return (
     <div>
+      <Helmet>
+      <title>Imagens Cachorros Aleatórios</title>
+<meta name="title" content="Imagens Cachorros Aleatórios" />
+<meta name="description" content="Imagens de Cachorros Aleatórios" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cachorrosaleatorios.vercel.app/" />
+<meta property="og:title" content="Imagens Cachorros Aleatórios" />
+<meta property="og:description" content="Imagens de Cachorros Aleatórios" />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://cachorrosaleatorios.vercel.app/" />
+<meta property="twitter:title" content="Imagens Cachorros Aleatórios" />
+<meta property="twitter:description" content="Imagens de Cachorros Aleatórios" />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+      </Helmet>
       <h1 className='insta'>By: @y.lipe___</h1>
     <h1>Random Dog Images</h1>
     <div className='container'>
