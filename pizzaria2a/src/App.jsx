@@ -35,7 +35,7 @@ function App() {
 <meta property="og:title" content="Imagens Cachorros Aleatórios" />
 <meta property="og:description" content="Imagens de Cachorros Aleatórios" />
 <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
-
+<meta name="keywords" content="cachorro, cachorros, aleatorios, imagens, dogs, random, images, cachorros aleatorios, random dog images" />
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content="https://cachorrosaleatorios.vercel.app/" />
